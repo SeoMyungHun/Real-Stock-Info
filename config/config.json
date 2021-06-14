@@ -1,0 +1,8 @@
+{
+    "DB_USERNAME": "fogman",
+    "DB_PASSWORD": "fogman@1610",
+    "DB_PORT": "3306",
+    "DB_HOST": "localhost",
+    "DB_NAME": "STOCK_INFO_DB",
+    "DB_ENGIN" : "mysql"
+}
