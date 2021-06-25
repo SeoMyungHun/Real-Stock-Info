@@ -17,4 +17,6 @@ require (
 	golang.org/x/net v0.0.0-20210610132358-84b48f89b13b // indirect
 	google.golang.org/appengine v1.6.7 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
+	gorm.io/driver/mysql v1.1.0 // indirect
+	gorm.io/gorm v1.21.11 // indirect
 )

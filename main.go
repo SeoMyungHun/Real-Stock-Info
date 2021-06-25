@@ -1,12 +1,14 @@
 package main
 
 import (
-	"fmt"
+	"realStock/database"
 	"realStock/stockcode"
 	"time"
 )
 
 func main() {
+
+	database.InitDB()
 
 	tradeInfo := stockcode.TradeInfo{}
 	tradeInfo.SetTradeInfo()
@@ -19,10 +21,7 @@ func main() {
 		select {
 		case <-ticker.C:
 
-			fmt.Println(tradeInfo.GetCallTradeInfo())
-			if !tradeInfo.GetCallTradeInfo() {
-				tradeInfo.GetTradeInfo()
-			}
+			tradeInfo.GetTradeInfo()
 		}
 	}
 }

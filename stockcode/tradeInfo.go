@@ -5,18 +5,17 @@ import (
 	"realStock/config"
 	"strconv"
 	"strings"
+	"sync"
 	"time"
 
 	"github.com/gocolly/colly"
 )
 
 type TradeInfo struct {
-	isRequestCall 	bool
-	stockCodeArray [] StockInfo
-}
 
-func (info * TradeInfo) GetCallTradeInfo() bool  {
-	return info.isRequestCall
+	stockCodeArray [] StockInfo
+
+	mutex sync.Mutex
 }
 
 func (info * TradeInfo) SetTradeInfo() {
@@ -25,7 +24,10 @@ func (info * TradeInfo) SetTradeInfo() {
 
 func (info * TradeInfo)GetTradeInfo()  {
 
-	info.isRequestCall = true
+	info.mutex.Lock()
+
+	//defer info.mutex.Unlock()
+
 	for index := range info.stockCodeArray {
 		stockInfo := info.stockCodeArray[index]
 
@@ -34,7 +36,7 @@ func (info * TradeInfo)GetTradeInfo()  {
 		time.Sleep(500 * time.Microsecond)
 	}
 
-	info.isRequestCall = false
+	defer info.mutex.Unlock()
 
 }
 
