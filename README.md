@@ -10,10 +10,7 @@ Real-time stock inquiry program developed with Golang (Golang으로 개발 한 �
   - mysql 
   - 개발툴 : Goland 
   
-3. 추후 개선 항목 
-  - 분산해서 주식조회를 할 수 있도록 구현 할 예정 
-  - DB에 대해서 ORM을 적용할 예정 
-
+3. 분산처리해서 데이터를 조회 할 수 있도록 구현 예정
 
   
 
