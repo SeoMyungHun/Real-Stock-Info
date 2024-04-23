@@ -1,5 +1,5 @@
 # Real-Stock-Info
-Real-time stock inquiry program developed with Golang (Golang으로 개발 한 실시간 재고 조회 프로그램)
+Real-time stock inquiry program developed with Golang (Golang으로 개발 한 실시간 주식 조회 프로그램)
 
 1. 개요
  - Golang을 개인적으로 공부하면 주식 변경상황을 실시간적으로 분석하기위한 데이터를 수집하기 위해 개발 한 소스임.
